@@ -22,6 +22,7 @@ function myChart(id) {
       labels: xValues,
       datasets: [
         {
+          label:"DS",
           data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
           borderColor: "red",
           fill: false,
@@ -39,7 +40,7 @@ function myChart(id) {
       ],
     },
     options: {
-      legend: { display: false },
+      // legend: { display: false },
     },
   });
 }
