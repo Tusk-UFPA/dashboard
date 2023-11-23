@@ -64,12 +64,12 @@ body {
     width: 100%;
     background-color: azure;
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .canvas-container {
-    width: 100%;
-    padding: 1rem;
+    /* width: 100%; */
+    /* padding: 1rem; */
 }
 
 canvas {
