@@ -1,61 +1,47 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "layout.html" %}
+{% block body %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/index.css">
-    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
-    <script src="../static/js/Chart.js"></script>
-    <script defer src="../static/js/index.js"></script>
-
-    <title>Dashboard - TUSK</title>
-</head>
-
-<body>
-    <nav class="navbar">
-        <div class="log-name">
-            <div class="logo-img">
-                <img src="../static/img/Logo_Tusk.png" alt="Logo_Tusk" srcset="">
-            </div>
-        </div>
-        <!-- <div class="menu">meu</div> -->
-    </nav>
-
-    <div class="main">
-
-        <div class="container">
-            <div class="main-graph">
-                <div class="canvas-container">
-                    <canvas id="my" style="max-width: 1080px; ">
-                    </canvas>
-                </div>
-
-            </div>
-            <div class="batt">
-                bn
-            </div>
-
-            <div class="grid-graph">
-
-                <div class="main-graph">
-                    <div class="canvas-container">
-                        <canvas id="my2" style="max-width: 1080px;">
-                        </canvas>
-                    </div>
-                </div>
-
-                <div class="main-graph">
-                    <div class="canvas-container">
-                        <canvas id="my3" style="max-width: 1080px;">
-                        </canvas>
-                    </div>
-                </div>
-
-            </div>
-
+<nav class="navbar">
+    <div class="log-name">
+        <div class="logo-img">
+            <img src="../static/img/Logo_Tusk.png" alt="Logo_Tusk" srcset="">
         </div>
     </div>
-</body>
+    <!-- <div class="menu">meu</div> -->
+</nav>
 
-</html>
+<div class="main">
+
+    <div class="container">
+        <div class="main-graph">
+            <div class="canvas-container">
+                <canvas id="my" style="max-width: 1080px; ">
+                </canvas>
+            </div>
+
+        </div>
+        <div class="batt">
+            bn
+        </div>
+
+        <div class="grid-graph">
+
+            <div class="main-graph">
+                <div class="canvas-container">
+                    <canvas id="my2" style="max-width: 1080px;">
+                    </canvas>
+                </div>
+            </div>
+
+            <div class="main-graph">
+                <div class="canvas-container">
+                    <canvas id="my3" style="max-width: 1080px;">
+                    </canvas>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
