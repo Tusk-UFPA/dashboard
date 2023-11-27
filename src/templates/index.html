@@ -1,87 +1,65 @@
-{% extends "layout.html" %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<nav class="navbar">
-    <div class="log-name">
-        <div class="logo-img">
-            <img src="../static/img/Logo_Tusk.png" alt="Logo_Tusk" srcset="">
-        </div>
-    </div>
-    <!-- <div class="menu">meu</div> -->
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <!-- <script src="static/js/Chart.js"></script> -->
+    <!-- <script src="static/js/chart.min.js"></script> -->
+    <script src="static/js/chart.umd.min.js"></script>
+    <script defer src="static/js/index.js"></script>
 
-<div class="main">
-    {% if (data) %}
-    {% print(data)%}
+    <title>Dashboard - TUSK</title>
+</head>
 
-    <div class="container">
-        <div class="main-graph">
-            <div class="canvas-container">
-                <canvas id="my" style="max-width: 1080px; ">
-                </canvas>
+<body>
+    <nav class="navbar">
+        <div class="log-name">
+            <div class="logo-img">
+                <img src="../static/img/Logo_Tusk.png" alt="Logo_Tusk" srcset="">
             </div>
-
         </div>
-        <div class="batt">
-            bn
-        </div>
+        <!-- <div class="menu">meu</div> -->
+    </nav>
 
-        <div class="grid-graph">
-
-            <div class="main-graph">
-                <div class="canvas-container">
-                    <canvas id="my2" style="max-width: 1080px;">
-                    </canvas>
+    <div class="main">
+        <div class="container">
+            <div class="both">
+                <div class="main-graph">
+                    <div class="canvas-container">
+                        <canvas id="my" role="img">
+                        </canvas>
+                    </div>
                 </div>
             </div>
 
-            <div class="main-graph">
-                <div class="canvas-container">
-                    <canvas id="my3" style="max-width: 1080px;">
-                    </canvas>
+            <div class="batt">
+                bn
+            </div>
+
+            <div class="grid-graph">
+
+                <div class="main-graph">
+                    <div class="canvas-container">
+                        <canvas id="my2" role="img">
+                        </canvas>
+                    </div>
                 </div>
+
+                <div class="main-graph">
+                    <div class="canvas-container">
+                        <canvas id="my3" role="img">
+                        </canvas>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
     </div>
-    <script defer>
-        const my = document.getElementById("my")
-        const my2 = document.getElementById("my2").getContext("2d");
-        const my3 = document.getElementById("my3").getContext("2d");
-        myChart(my)
-        myChart(my2)
-        myChart(my3)
-        const xValues = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
+</body>
 
-
-
-        new Chart(my, {
-            type: "line",
-            data: {
-                labels: xValues,
-                datasets: [{
-                        label: "Fotovoltaica",
-                        data: [0, 0, 0, 0, 0, 0, 0, 500, 2000, 4000, 6000, 7000, 7000, 7000, 6000, 4000, 2000, 1000, 200, 100],
-                        borderColor: "blue",
-                        fill: false,
-                    }, {
-                        label: "Eólica",
-                        data: [860, 1140, 1060, 1060, 1070, 1110, 2210, 6830, 7830, 6830, 2478],
-                        borderColor: "red",
-                        fill: false,
-                    },
-
-
-                ],
-            },
-            options: {
-                // legend: { display: false },
-            },
-        });
-    </script>
-    {% else %}
-    <h1>no data ...</h1>
-    {% endif %}
-</div>
-{% endblock %}
+</html>

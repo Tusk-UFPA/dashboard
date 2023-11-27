@@ -10,4 +10,8 @@ data=json.load(fs)
 # url_for('static', filename='style.css')
 @app.route('/')
 def home():
-    return render_template('index.html', data=data)
+    return render_template('index.html')
+
+@app.route('/sola')
+def sola():
+    return  data
