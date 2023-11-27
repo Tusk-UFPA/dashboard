@@ -42,17 +42,17 @@ body {
 
 .container {
     padding: 3rem 0rem;
-    background-color: burlywood;
+    background-color: rgb(172, 172, 172);
     width: calc(100% - 25rem);
 
 }
 
-.both{
+.both {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 35rem;
-    width: 80%;
+    /* width: 80%; */
 
 }
 
@@ -61,11 +61,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-color: azure;
     padding: 5px;
     border-radius: 5px;
-
 }
 
 .grid-graph {
@@ -73,19 +72,20 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 19r;
     background-color: azure;
     border-radius: 2px;
     /* overflow: hidden; */
 }
 
 .canvas-container {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     /* padding: 1rem; */
 }
 
 canvas {
-    width: 100% !important;
+    /* width: 100% !important; */
     height: 100% !important;
 }
 
