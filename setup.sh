@@ -3,7 +3,7 @@
 python -m venv venv 
 source venv/bin/activate
 
-python pip install --upgrade pip
-python pip install -r requirement.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirement.txt
 
-flask -app server.py run
+flask --app server.py run
