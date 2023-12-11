@@ -8,7 +8,7 @@ const my3 = document.getElementById("my3").getContext("2d");
 
 //     )
 
-let solaURL = "sola";
+let solaURL = "all";
 async function solaApi() {
   let res = await fetch(solaURL);
   let data = await res.json();

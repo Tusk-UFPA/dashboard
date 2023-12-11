@@ -6,4 +6,4 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirement.txt
 
-flask --app server.py run
+sudo python3 server.py
