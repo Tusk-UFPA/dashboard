@@ -9,6 +9,10 @@ import json
 # # url_for('static')
 # # url_for('static', filename='style.css')
 
+fs = open("src/data/data.json","r")
+data=json.load(fs)
+print(type( data['sola']['data']))
+
 @app.route('/')
 def home():
     return render_template('index.html')
